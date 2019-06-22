@@ -1,4 +1,5 @@
 package com.esri.android.nearbyplaces.data;
+
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.res.ResourcesCompat;
@@ -6,6 +7,7 @@ import com.esri.android.nearbyplaces.R;
 
 import java.util.Arrays;
 import java.util.List;
+
 
 public class CategoryHelper {
   static final List<String> foodTypes = Arrays.asList(
@@ -77,7 +79,13 @@ public class CategoryHelper {
           "Vegetarian Food",
           "Vietnamese Food",
           "Winery");
-  
+
+  /**
+   * Checks a specific type of food (e.g. Thai Food) against
+   * a known list of food types.
+   * @param foodType - String representing a type of food
+   * @return - Returns a String, either 'Food' or if not found in list, returns the input.
+   */
   private static String getCategoryForFoodType(final String foodType){
     String category = foodType;
     if (foodTypes.contains(foodType)){
@@ -85,12 +93,16 @@ public class CategoryHelper {
     }
     return category;
   }
-
+  /**
+   * Assign appropriate drawable given place type
+   * @param p - Place
+   * @return - Drawable
+   */
   public static Integer getResourceIdForPlacePin(final Place p){
     final String category = CategoryHelper.getCategoryForFoodType(p.getType());
     final int d;
     switch (category){
-      case "Sports Center":
+      case "Pizza":
         d = R.drawable.pizza_pin;
         break;
       case "Hotel":
@@ -99,7 +111,7 @@ public class CategoryHelper {
       case "Food":
         d = R.drawable.restaurant_pin;
         break;
-      case "Park":
+      case "Bar or Pub":
         d = R.drawable.bar_pin;
         break;
       case "Coffee Shop":
@@ -110,7 +122,13 @@ public class CategoryHelper {
     }
     return d;
   }
-  
+
+  /**
+   * Return appropriate drawable base on place type
+   * @param p - Place item
+   * @param a - Activity
+   * @return - Drawable
+   */
   public static Drawable getDrawableForPlace(final Place p, final Activity a){
 
     final String placeType = p.getType();
@@ -119,19 +137,20 @@ public class CategoryHelper {
     switch (category){
 
       case "Hotel":
-        d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_hotel_black_24dp,null);
+        d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_hotel_pink_24dp,null);
         break;
       case "Food":
         d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_local_dining_black_24dp,null);
         break;
+
       case "Coffee Shop":
         d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_local_cafe_black_24dp,null);
         break;
       case "Park":
-        d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_local_bar_black_24dp,null);
+        d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_park_black_24dp,null);
         break;
       case "Sports Center":
-        d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_local_bar_black_24dp,null);
+        d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_fitness_center_pink_24dp,null);
         break;
       default:
         d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_place_black_24dp,null);
