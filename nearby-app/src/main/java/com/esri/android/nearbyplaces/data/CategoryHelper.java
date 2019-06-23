@@ -140,7 +140,7 @@ public class CategoryHelper {
         d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_hotel_pink_24dp,null);
         break;
       case "Food":
-        d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_local_dining_black_24dp,null);
+        d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_restaurant_menu_pink_24dp,null);
         break;
 
       case "Coffee Shop":
@@ -153,7 +153,7 @@ public class CategoryHelper {
         d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_fitness_center_pink_24dp,null);
         break;
       default:
-        d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_place_black_24dp,null);
+        d = ResourcesCompat.getDrawable(a.getResources(), R.drawable.ic_pin_drop_black_24dp,null);
     }
     return d;
   }

@@ -14,10 +14,10 @@ public class CategoryKeeper {
     private CategoryKeeper(){
         // mCategories.add(new FilterItem("Bar", R.drawable.ic_local_bar_grey_48dp, true, R.drawable.ic_local_bar_blue_48dp));
         mCategories.add(new FilterItem("Coffee Shop", R.drawable.ic_local_cafe_grey_48dp, true, R.drawable.ic_local_cafe_black_24dp));
-        mCategories.add(new FilterItem("Food", R.drawable.ic_local_dining_grey_48dp, true, R.drawable.ic_local_bar_black_24dp));
+        mCategories.add(new FilterItem("Food", R.drawable.ic_local_dining_grey_48dp, true, R.drawable.ic_restaurant_menu_pink_24dp));
         mCategories.add(new FilterItem("Hotel", R.drawable.ic_local_hotel_grey_48dp, true, R.drawable.ic_hotel_pink_24dp));
-        mCategories.add(new FilterItem("Park", R.drawable.ic_local_bar_grey_48dp, true, R.drawable.ic_park_black_24dp));
-        mCategories.add(new FilterItem("Sports Center", R.drawable.ic_local_bar_grey_48dp, true, R.drawable.ic_fitness_center_pink_24dp));
+        mCategories.add(new FilterItem("Park", R.drawable.ic_nature_grey_24dp, true, R.drawable.ic_park_black_24dp));
+        mCategories.add(new FilterItem("Sports Center", R.drawable.ic_fitness_center_grey_24dp, true, R.drawable.ic_fitness_center_pink_24dp));
     }
 
     public static CategoryKeeper getInstance(){
