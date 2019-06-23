@@ -111,11 +111,14 @@ public class CategoryHelper {
       case "Food":
         d = R.drawable.restaurant_pin;
         break;
-      case "Bar or Pub":
-        d = R.drawable.bar_pin;
+      case "Sports Center":
+        d = R.drawable.ff_;
         break;
       case "Coffee Shop":
         d = R.drawable.cafe_pin;
+        break;
+      case "Park":
+        d = R.drawable.pp_2;
         break;
       default:
         d = R.drawable.empty_pin;
